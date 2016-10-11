@@ -124,16 +124,26 @@ module.exports = function(){
 
 
 var first_names = ['Chris', 'Bradley', 'Fox', 'Hunter', 'Jason', 'Wolf', 'Marko', 'Chalupa', 'Bearded', 'Abominable', 'Cruze', 'Wayne', 'Kanye'],
-    last_names = ['Brooks', 'Jackson', 'Santiago', 'Basdeo', 'Cavallero', 'Trowbridge', 'Simkins', B'Blackwell', 'Desperado', 'Vandal', 'Savage', 'Gunn', 'Fencer'],
-    service_names = ['Chef', 'DJ', 'Fire Dancer', ]
+    last_names = ['Brooks', 'Jackson', 'Santiago', 'Basdeo', 'Cavallero', 'Trowbridge', 'Simkins', 'Blackwell', 'Desperado', 'Vandal', 'Savage', 'Gunn', 'Fencer'],
+    specialties, = ['Chef', 'DJ', 'Fire Dancer', 'Decorator', 'Skydiving Deepdish Delivery']
     usernames = ['Yung_WildNFree', 'Big_cheese_Homie', 'NoSwagSinatra', 'CallMeBird', 'Passion_con_carne', 'LoveLostInQueso', 'sleepy_Django', 'unbrokenGlass', 'T-Wayne', 'DaFishesSleepWitMe', 'UnderRated_OverPowered', 'Angry4RlyNoReason', 'That1Guy', 'Hanglider_homie', 'Super_duper_salty', 'BetterThanTheRest', 'peacel0ve'],
     review_comments = ['awesome', 'really enjoyable', 'would never again', 'kinda iffy', 'Meh, Take it or leave it'],
-    service_descriptions = "This is really just as good as it gets. I mean, come on, look at this service. When you were a little kid and you thought 'I wanna throw the gnarlyest parties of all time when I grow up!'? Well I just made that possible for you, with this... ",
-    expenditure_name =
+    service_description = "This is really just as good as it gets. I mean, come on, look at this service. When you were a little kid and you thought 'I wanna throw the gnarlyest parties of all time when I grow up!'? Well I just made that possible for you, with this... ",
+    service_names = ['Fireworks', 'Dance Battles', 'Live Comedy','H.A.L.O Jump Deepdish w/ Buffalo Wings Delivery','Flaming Wingsuit Deepdish Delivery', 'Thai food', 'Mexican Food', 'Pizza', 'Zoo Animals', 'Artifacts', 'Massage/Acupuncture', 'Live Demolition', 'Miming'],
+    expenditure_name = ['this', 'that', 'crazy night out', '..that charge is false', "Don't ask. Don't judge.", "Meeting with Clien...Vegas", 'yknow, stuff', 'Living gluten free' ],
+    inventory_items = ['Sausage Pizza', 'Fire Poi', 'Turntables','Sabre', 'Velour Sweatsuit', 'Mink Coat', 'Tiny Lion', ],
+    photo_caption = 'BFF4EVR'
+
+// Given a value => Returns a random, floored value between 0 - value
+function RF(value){
+  return Math.floor(Math.random() * (value))
+}
+
 
 function generateServiceProviders(){
   return {
-
+    first_name: first_names[RF(first_names.length)]
+    last_name: last_names[RF(last_names.length)]
   }
 }
 
