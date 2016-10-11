@@ -2,8 +2,8 @@ import React from 'react'
 import { Router, Route, browserHistory } from 'react-router'
 
 import App from './components/App'
-import HelloWorld from './components/HelloWorld'
-import GoodbyeWorld from './components/GoodbyeWorld'
+import HelloWorld from './containers/Hello'
+import GoodbyeWorld from './containers/Goodbye'
 
 export default (
   <Route path='/' component={App}>
